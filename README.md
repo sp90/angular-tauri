@@ -16,8 +16,8 @@ Bootstrap and package your project with Angular 14 (Typescript + SASS + Hot Relo
 
 Currently runs with:
 
-- Angular v15.2.0
-- Tauri 1.0.5
+- Angular v16.0.1
+- Tauri 1.3.0
 
 With this sample, you can:
 
@@ -29,26 +29,26 @@ With this sample, you can:
 
 ## Getting Started
 
-*Clone this repository locally:*
+_Clone this repository locally:_
 
-``` bash
+```bash
 git clone https://github.com/maximegris/angular-tauri.git
 ```
 
-*Install Tauri (Rust)*
+_Install Tauri (Rust)_
 
 https://tauri.studio/docs/getting-started/prerequisites
 
-*Install dependencies with npm:*
+_Install dependencies with npm:_
 
-``` bash
+```bash
 npm install
 ```
 
 If you want to generate Angular components with Angular-cli , you **MUST** install `@angular/cli` in npm global context.
 Please follow [Angular-cli documentation](https://github.com/angular/angular-cli) if you had installed a previous version of `angular-cli`.
 
-``` bash
+```bash
 npm install -g @angular/cli
 ```
 
@@ -58,13 +58,13 @@ npm install -g @angular/cli
 
 Voila! You can use your Angular + Tauri app in a local development environment with hot reload!
 
-The application code is managed by `src-tauri/main.rs`. \ 
+The application code is managed by `src-tauri/main.rs`. \
 In this sample, the app runs with a simple Angular App (http://localhost:4200), and a webView managed by Tauri.
 
 ## Project structure
 
 | Folder    | Description                                   |
-|-----------|-----------------------------------------------|
+| --------- | --------------------------------------------- |
 | src-tauri | Tauri main process folder (Rust)              |
 | src       | Tauri renderer process folder (Web / Angular) |
 
@@ -74,11 +74,11 @@ Maybe you only want to execute the application in the browser with hot reload? J
 
 ## Included Commands
 
-| Command                 | Description                                                                                           |
-|-------------------------|-------------------------------------------------------------------------------------------------------|
-| `npm run web:serve`     | Execute the app in the web browser (DEV mode)                                                         |
-| `npm run web:prod`      | Build the app that can be used directly in the web browser. Your built files are in the /dist folder. |
-| `npm run tauri:bundle`  | Builds your application and creates an app consumable based on your operating system                  |
+| Command                | Description                                                                                           |
+| ---------------------- | ----------------------------------------------------------------------------------------------------- |
+| `npm run web:serve`    | Execute the app in the web browser (DEV mode)                                                         |
+| `npm run web:prod`     | Build the app that can be used directly in the web browser. Your built files are in the /dist folder. |
+| `npm run tauri:bundle` | Builds your application and creates an app consumable based on your operating system                  |
 
 **Your application is optimised. Only /dist folder is included in the final bundle.**
 
@@ -89,10 +89,8 @@ Maybe you only want to execute the application in the browser with hot reload? J
 [license]: https://github.com/maximegris/angular-tauri/blob/main/LICENSE.md
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-red.svg
 [prs]: http://makeapullrequest.com
-
 [tauri-build-badge]: https://github.com/maximegris/angular-tauri/workflows/Tauri%20Build/badge.svg
 [tauri-build]: https://github.com/maximegris/angular-tauri/actions?query=workflow%3A%22Tauri+Build%22
-
 [github-watch-badge]: https://img.shields.io/github/watchers/maximegris/angular-tauri.svg?style=social
 [github-watch]: https://github.com/maximegris/angular-tauri/watchers
 [github-star-badge]: https://img.shields.io/github/stars/maximegris/angular-tauri.svg?style=social
