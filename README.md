@@ -43,8 +43,6 @@ git clone https://github.com/sp90/angular-tauri-slim.git
 
 https://tauri.studio/docs/getting-started/prerequisites
 
-<br />
-
 ### Install dependencies with npm
 
 ```bash
@@ -63,8 +61,6 @@ npm start
 
 The application code is managed by `src-tauri/main.rs`. \
 
-<br />
-
 ## Project structure
 
 | Folder    | Description                                   |
@@ -76,8 +72,6 @@ The application code is managed by `src-tauri/main.rs`. \
 
 Maybe you only want to execute the application in the browser with hot reload? Just run `npm run web:serve`.
 
-<br />
-
 ## Included Commands
 
 | Command                | Description                                                                                           |
@@ -87,8 +81,6 @@ Maybe you only want to execute the application in the browser with hot reload? J
 | `npm run tauri:bundle` | Builds your application and creates an app consumable based on your operating system                  |
 
 **Your application is optimised. Only /dist folder is included in the final bundle.**
-
-<br />
 
 ## Note for bun users
 
