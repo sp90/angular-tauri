@@ -5,9 +5,7 @@ import { invoke } from '@tauri-apps/api/tauri';
   providedIn: 'root'
 })
 export class TauriService {
-
-  constructor() {
-  }
+  constructor() {}
 
   get isTauri(): boolean {
     return !!(window && window.__TAURI__);

@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 import { APP_CONFIG } from '../environments/environment';
 import { TauriService } from './core/services';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  template: '<router-outlet />',
   standalone: true,
   imports: [RouterOutlet]
 })
 export default class AppComponent {
-  constructor(private tauriService: TauriService, private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
+  constructor(private tauriService: TauriService) {
     console.log('APP_CONFIG', APP_CONFIG);
 
     if (this.tauriService.isTauri) {

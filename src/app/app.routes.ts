@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { PageNotFoundComponent } from './shared/components';
 
 const routes: Routes = [
   {
@@ -14,10 +13,6 @@ const routes: Routes = [
   {
     path: 'detail',
     loadChildren: () => import('./detail/detail.routes')
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent
   }
 ];
 

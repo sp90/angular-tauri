@@ -59,7 +59,7 @@ npm install -g @angular/cli
 Voila! You can use your Angular + Tauri app in a local development environment with hot reload!
 
 The application code is managed by `src-tauri/main.rs`. \
-In this sample, the app runs with a simple Angular App (http://localhost:4200), and a webView managed by Tauri.
+In this sample, the app runs with a simple Angular App (http://localhost:4202), and a webView managed by Tauri.
 
 ## Project structure
 
