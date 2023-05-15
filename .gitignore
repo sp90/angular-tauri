@@ -9,6 +9,7 @@
 main.js
 src/**/*.js
 *.js.map
+bun.lockb
 
 # dependencies
 node_modules

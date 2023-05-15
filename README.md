@@ -1,23 +1,27 @@
 [![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) <img src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/tauri.svg" width="50">
 
-![Maintained][maintained-badge]
-[![Make a pull request][prs-badge]][prs]
-[![License][license-badge]](LICENSE.md)
-
-[![Build][tauri-build-badge]][tauri-build]
-
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
-
 # Introduction
 
-Bootstrap and package your project with Angular 14 (Typescript + SASS + Hot Reload) and Tauri (Rust) for creating Desktop applications.
+Fork of `angular-tauri`: but a slimmer version
+
+What changed:
+
+- Updated to ng16
+- Updated to tauri 1.3
+- Updated to typescript v5+
+- Utilize standalone components
+- Remove all packages that does not help run this paticular setup
+- Remove linting
+- Remove tests
+- Added .prettierrc to auto format code
+
+_Why; Because I needed a tool that was just Angular and Tauri nothing else. Here it's up to the user to add what they need._
 
 Currently runs with:
 
-- Angular v16.0.1
-- Tauri 1.3.0
+- Angular `16.0.1`
+- Tauri `1.3.0`
+- Typescript `5.0.4`
 
 With this sample, you can:
 
@@ -25,41 +29,41 @@ With this sample, you can:
 - Run your app in a production environment
 - Package your app into an executable file for Linux, Windows & Mac
 
-/!\ Angular CLI needs Node 14 or later to work correctly.
+/!\ Angular CLI needs Node 16 or later to work correctly.
 
 ## Getting Started
 
-_Clone this repository locally:_
+### Clone this repository locally
 
 ```bash
-git clone https://github.com/maximegris/angular-tauri.git
+git clone https://github.com/sp90/angular-tauri-slim.git
 ```
 
-_Install Tauri (Rust)_
+### Install Tauri (Rust)
 
 https://tauri.studio/docs/getting-started/prerequisites
 
-_Install dependencies with npm:_
+<br />
+
+### Install dependencies with npm
 
 ```bash
 npm install
 ```
 
-If you want to generate Angular components with Angular-cli , you **MUST** install `@angular/cli` in npm global context.
-Please follow [Angular-cli documentation](https://github.com/angular/angular-cli) if you had installed a previous version of `angular-cli`.
-
-```bash
-npm install -g @angular/cli
-```
-
 ## To build for development
 
-- **in a terminal window** -> npm start
+Angular + Tauri app in a local environment on `localhost:4202`
 
-Voila! You can use your Angular + Tauri app in a local development environment with hot reload!
+```bash
+npm start
+```
+
+## Rust code
 
 The application code is managed by `src-tauri/main.rs`. \
-In this sample, the app runs with a simple Angular App (http://localhost:4202), and a webView managed by Tauri.
+
+<br />
 
 ## Project structure
 
@@ -72,6 +76,8 @@ In this sample, the app runs with a simple Angular App (http://localhost:4202), 
 
 Maybe you only want to execute the application in the browser with hot reload? Just run `npm run web:serve`.
 
+<br />
+
 ## Included Commands
 
 | Command                | Description                                                                                           |
@@ -82,18 +88,8 @@ Maybe you only want to execute the application in the browser with hot reload? J
 
 **Your application is optimised. Only /dist folder is included in the final bundle.**
 
-## Branch & Packages version
+<br />
 
-[maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
-[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[license]: https://github.com/maximegris/angular-tauri/blob/main/LICENSE.md
-[prs-badge]: https://img.shields.io/badge/PRs-welcome-red.svg
-[prs]: http://makeapullrequest.com
-[tauri-build-badge]: https://github.com/maximegris/angular-tauri/workflows/Tauri%20Build/badge.svg
-[tauri-build]: https://github.com/maximegris/angular-tauri/actions?query=workflow%3A%22Tauri+Build%22
-[github-watch-badge]: https://img.shields.io/github/watchers/maximegris/angular-tauri.svg?style=social
-[github-watch]: https://github.com/maximegris/angular-tauri/watchers
-[github-star-badge]: https://img.shields.io/github/stars/maximegris/angular-tauri.svg?style=social
-[github-star]: https://github.com/maximegris/angular-tauri/stargazers
-[twitter]: https://twitter.com/intent/tweet?text=Check%20out%20angular-tauri!%20https://github.com/maximegris/angular-tauri%20%F0%9F%91%8D
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/maximegris/angular-tauri.svg?style=social
+## Note for bun users
+
+I have tested this does also work with `0.6.0` [bun.sh](https://bun.sh) where the install process is much faster around `~3s` in total instead of `~18s` which is great for github actions or other CI tool chains.
