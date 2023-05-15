@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { APP_CONFIG } from '../environments/environment';
-import { TauriService } from './core/services';
+import { TauriService } from './core/services/tauri/tauri.service';
 
 @Component({
   selector: 'app-root',
