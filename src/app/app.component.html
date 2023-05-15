@@ -1,0 +1,15 @@
+<div data-tauri-drag-region class="titlebar" *ngIf="isTauri">
+  <div class="actions">
+    <div class="titlebar-btn close" (click)="close()">
+      <img class="titlebar-icon" src="/assets/app-icons/close.svg" alt="" />
+    </div>
+    <div class="titlebar-btn minimize" (click)="minimize()">
+      <img class="titlebar-icon" src="/assets/app-icons/minimize.svg" alt="" />
+    </div>
+    <div class="titlebar-btn toggle-maximize" (click)="toggleMaximize()">
+      <img class="titlebar-icon" src="/assets/app-icons/maximize.svg" alt="" />
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

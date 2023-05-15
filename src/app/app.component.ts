@@ -1,15 +1,20 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { appWindow } from '@tauri-apps/api/window';
 import { APP_CONFIG } from '../environments/environment';
 import { TauriService } from './core/services/tauri/tauri.service';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet />',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterOutlet]
+  imports: [RouterOutlet, NgIf]
 })
 export default class AppComponent {
+  isTauri = this.tauriService.isTauri;
+
   constructor(private tauriService: TauriService) {
     console.log('APP_CONFIG', APP_CONFIG);
 
@@ -19,5 +24,17 @@ export default class AppComponent {
     } else {
       console.log('Run in browser');
     }
+  }
+
+  minimize() {
+    appWindow.minimize();
+  }
+
+  toggleMaximize() {
+    appWindow.toggleMaximize();
+  }
+
+  close() {
+    appWindow.close();
   }
 }

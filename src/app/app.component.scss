@@ -1,0 +1,42 @@
+.titlebar {
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  position: fixed;
+  padding: 16px;
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+
+  &:hover .titlebar-icon {
+    opacity: 1;
+  }
+}
+
+.titlebar-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fe5f57;
+  display: grid;
+  place-content: center;
+
+  &.minimize {
+    background-color: #febb2e;
+  }
+
+  &.toggle-maximize {
+    background-color: #26c940;
+  }
+
+  .titlebar-icon {
+    width: 6px;
+    opacity: 0;
+    transition: opacity 125ms ease-in-out;
+  }
+}

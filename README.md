@@ -14,6 +14,7 @@ What changed:
 - Remove linting
 - Remove tests
 - Added .prettierrc to auto format code
+- Removed native titlebar and native buttons replaced with angular/web ones so they are easy stylable and configurable
 
 _Why; Because I needed a tool that was just Angular and Tauri nothing else. Here it's up to the user to add what they need._
 
